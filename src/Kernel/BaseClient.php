@@ -135,7 +135,7 @@ class BaseClient
     }
 
     /**
-     * Attache access token to request query.
+     * access token to request query.
      *
      * @return \Closure
      */
