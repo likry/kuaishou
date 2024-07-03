@@ -12,11 +12,8 @@ use GuzzleHttp\Psr7\Request;
  */
 class BaseClient
 {
-    use HasHttpRequests, HasSdkBaseInfo {
-        request as performRequest;
-        HasHttpRequests::getResponseType insteadof HasSdkBaseInfo;
-        HasHttpRequests::setResponseType insteadof HasSdkBaseInfo;
-    }
+    use HasHttpRequests, HasSdkBaseInfo;
+
 
     /**
      * @var string
@@ -53,7 +50,7 @@ class BaseClient
     public function httpGetJson($url, array $data = [], array $query = [])
     {
         $data['advertiser_id'] = $this->getAdvertiserId();
-        return $this->request($url, 'GET', ['query' => $query, 'json' => $data]);
+        return $this->httpRequest($url, 'GET', ['query' => $query, 'json' => $data]);
     }
 
     /**
@@ -71,7 +68,7 @@ class BaseClient
     public function httpPost($url, array $data = [])
     {
         $data['advertiser_id'] = $this->getAdvertiserId();
-        return $this->request($url, 'POST', ['form_params' => $data]);
+        return $this->httpRequest($url, 'POST', ['form_params' => $data]);
     }
 
     /**
@@ -90,7 +87,7 @@ class BaseClient
     public function httpPostJson($url, array $data = [], array $query = [])
     {
         $data['advertiser_id'] = $this->getAdvertiserId();
-        return $this->request($url, 'POST', ['query' => $query, 'json' => $data]);
+        return $this->httpRequest($url, 'POST', ['query' => $query, 'json' => $data]);
     }
 
     /**
@@ -105,12 +102,12 @@ class BaseClient
      *
      * @throws ApiException
      */
-    public function request($url, $method = 'POST', array $options = [], $returnRaw = false)
+    public function httpRequest($url, $method = 'POST', array $options = [], $returnRaw = false)
     {
         if (empty($this->middlewares)) {
             $this->registerHttpMiddlewares();
         }
-        $response = $this->performRequest($url, $method, $options);
+        $response = $this->request($url, $method, $options);
 
         $result = $this->castResponseToType($response);
         $formatted = $this->castResponseToType($response, $this->getResponseType());
