@@ -1,6 +1,6 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Support;
+namespace Liukangkun\Kuaishou\Kernel\Support;
 
 /**
  * Array helper from Illuminate\Support\Arr.

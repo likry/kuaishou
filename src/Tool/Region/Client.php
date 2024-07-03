@@ -1,18 +1,18 @@
 <?php
 
-namespace Liukun\Kuaishou\Tool\Region;
+namespace Liukangkun\Kuaishou\Tool\Region;
 
-use Liukun\Kuaishou\Kernel\BaseClient;
+use Liukangkun\Kuaishou\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
     /**
      * 获取地域信息.
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function get()
     {

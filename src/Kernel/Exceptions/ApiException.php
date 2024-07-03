@@ -1,6 +1,6 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Exceptions;
+namespace Liukangkun\Kuaishou\Kernel\Exceptions;
 
 use Psr\Http\Message\ResponseInterface;
 
@@ -12,7 +12,7 @@ class ApiException extends Exception
     public $response;
 
     /**
-     * @var \Psr\Http\Message\ResponseInterface|\Liukun\Kuaishou\Kernel\Support\Collection|array|object|string|null
+     * @var \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string|null
      */
     public $formattedResponse;
 

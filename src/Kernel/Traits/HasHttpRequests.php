@@ -1,6 +1,6 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Traits;
+namespace Liukangkun\Kuaishou\Kernel\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

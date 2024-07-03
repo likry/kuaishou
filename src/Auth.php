@@ -1,9 +1,9 @@
 <?php
 
-namespace Liukun\Kuaishou;
+namespace Liukangkun\Kuaishou;
 
-use Liukun\Kuaishou\Kernel\Exceptions\AuthException;
-use Liukun\Kuaishou\Kernel\Traits\HasHttpRequests;
+use Liukangkun\Kuaishou\Kernel\Exceptions\AuthException;
+use Liukangkun\Kuaishou\Kernel\Traits\HasHttpRequests;
 
 class Auth
 {

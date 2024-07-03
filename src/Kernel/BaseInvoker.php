@@ -1,8 +1,8 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel;
+namespace Liukangkun\Kuaishou\Kernel;
 
-use Liukun\Kuaishou\Kernel\Traits\HasSubInvoker;
+use Liukangkun\Kuaishou\Kernel\Traits\HasSubInvoker;
 
 class BaseInvoker
 {

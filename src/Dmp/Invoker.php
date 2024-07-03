@@ -1,17 +1,17 @@
 <?php
 
-namespace Liukun\Kuaishou\Dmp;
+namespace Liukangkun\Kuaishou\Dmp;
 
-use Liukun\Kuaishou\Kernel\BaseInvoker;
+use Liukangkun\Kuaishou\Kernel\BaseInvoker;
 
 /**
  * Class Invoker.
  *
- * @property \Liukun\Kuaishou\Dmp\Population\Client $population
+ * @property \Liukangkun\Kuaishou\Dmp\Population\Client $population
  */
 class Invoker extends BaseInvoker
 {
     protected $providers = [
-        'population' => \Liukun\Kuaishou\Dmp\Population\Client::class,
+        'population' => \Liukangkun\Kuaishou\Dmp\Population\Client::class,
     ];
 }

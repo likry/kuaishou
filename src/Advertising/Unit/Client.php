@@ -1,8 +1,8 @@
 <?php
 
-namespace Liukun\Kuaishou\Advertising\Unit;
+namespace Liukangkun\Kuaishou\Advertising\Unit;
 
-use Liukun\Kuaishou\Kernel\BaseClient;
+use Liukangkun\Kuaishou\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
@@ -10,11 +10,11 @@ class Client extends BaseClient
      * 创建广告组.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function create(array $params)
     {
@@ -25,11 +25,11 @@ class Client extends BaseClient
      * 获取广告组列表.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function get(array $params)
     {
@@ -40,11 +40,11 @@ class Client extends BaseClient
      * 更新广告组.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function update(array $params)
     {
@@ -56,11 +56,11 @@ class Client extends BaseClient
      * @param $unitId
      * @param $bid
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function updateBid($unitId, $bid)
     {
@@ -77,11 +77,11 @@ class Client extends BaseClient
      * @param $unitId
      * @param $budget
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function updateBudget($unitId, $budget)
     {
@@ -98,11 +98,11 @@ class Client extends BaseClient
      * @param $unitId
      * @param $status
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function updateStatus($unitId, $status)
     {
@@ -116,11 +116,11 @@ class Client extends BaseClient
 
     /**
      * 获取深度转化类型.
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getConversionInfo()
     {

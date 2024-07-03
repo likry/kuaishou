@@ -1,8 +1,8 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Traits;
+namespace Liukangkun\Kuaishou\Kernel\Traits;
 
-use Liukun\Kuaishou\Kernel\Exceptions\Exception;
+use Liukangkun\Kuaishou\Kernel\Exceptions\Exception;
 
 /**
  * Trait HasSubInvoker.

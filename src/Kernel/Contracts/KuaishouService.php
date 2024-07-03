@@ -1,6 +1,6 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Contracts;
+namespace Liukangkun\Kuaishou\Kernel\Contracts;
 
 interface KuaishouService
 {

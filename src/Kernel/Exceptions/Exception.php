@@ -1,6 +1,6 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Exceptions;
+namespace Liukangkun\Kuaishou\Kernel\Exceptions;
 
 use Exception as BaseException;
 

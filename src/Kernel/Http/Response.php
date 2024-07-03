@@ -1,8 +1,8 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Http;
+namespace Liukangkun\Kuaishou\Kernel\Http;
 
-use Liukun\Kuaishou\Kernel\Support\Collection;
+use Liukangkun\Kuaishou\Kernel\Support\Collection;
 use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use Psr\Http\Message\ResponseInterface;
 

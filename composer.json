@@ -1,5 +1,5 @@
 {
-  "name": "liukun/kuaishou",
+  "name": "liukangkun/kuaishou",
   "description": "快手SDK",
   "keywords": [
     "kuaishou"
@@ -17,7 +17,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Liukun\\Kuaishou\\": "src/"
+      "Liukangkun\\Kuaishou\\": "src/"
     }
   }
 }

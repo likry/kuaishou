@@ -1,27 +1,27 @@
 <?php
 
-namespace Liukun\Kuaishou\Tool;
+namespace Liukangkun\Kuaishou\Tool;
 
-use Liukun\Kuaishou\Kernel\BaseInvoker;
+use Liukangkun\Kuaishou\Kernel\BaseInvoker;
 
 /**
  * Class Invoker.
  *
- * @property \Liukun\Kuaishou\Tool\App\Client          $app
- * @property \Liukun\Kuaishou\Tool\CreativeWord\Client $creativeWord
- * @property \Liukun\Kuaishou\Tool\File\Client         $file
- * @property \Liukun\Kuaishou\Tool\InterestTag\Client  $interestTag
- * @property \Liukun\Kuaishou\Tool\LandingPage\Client  $landingPage
- * @property \Liukun\Kuaishou\Tool\Region\Client       $region
+ * @property \Liukangkun\Kuaishou\Tool\App\Client          $app
+ * @property \Liukangkun\Kuaishou\Tool\CreativeWord\Client $creativeWord
+ * @property \Liukangkun\Kuaishou\Tool\File\Client         $file
+ * @property \Liukangkun\Kuaishou\Tool\InterestTag\Client  $interestTag
+ * @property \Liukangkun\Kuaishou\Tool\LandingPage\Client  $landingPage
+ * @property \Liukangkun\Kuaishou\Tool\Region\Client       $region
  */
 class Invoker extends BaseInvoker
 {
     protected $providers = [
-        'app'          => \Liukun\Kuaishou\Tool\App\Client::class,
-        'creativeWord' => \Liukun\Kuaishou\Tool\CreativeWord\Client::class,
-        'file'         => \Liukun\Kuaishou\Tool\File\Client::class,
-        'interestTag'  => \Liukun\Kuaishou\Tool\InterestTag\Client::class,
-        'landingPage'  => \Liukun\Kuaishou\Tool\LandingPage\Client::class,
-        'region'       => \Liukun\Kuaishou\Tool\Region\Client::class,
+        'app'          => \Liukangkun\Kuaishou\Tool\App\Client::class,
+        'creativeWord' => \Liukangkun\Kuaishou\Tool\CreativeWord\Client::class,
+        'file'         => \Liukangkun\Kuaishou\Tool\File\Client::class,
+        'interestTag'  => \Liukangkun\Kuaishou\Tool\InterestTag\Client::class,
+        'landingPage'  => \Liukangkun\Kuaishou\Tool\LandingPage\Client::class,
+        'region'       => \Liukangkun\Kuaishou\Tool\Region\Client::class,
     ];
 }

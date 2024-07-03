@@ -1,11 +1,11 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Traits;
+namespace Liukangkun\Kuaishou\Kernel\Traits;
 
-use Liukun\Kuaishou\Kernel\Contracts\Arrayable;
-use Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException;
-use Liukun\Kuaishou\Kernel\Http\Response;
-use Liukun\Kuaishou\Kernel\Support\Collection;
+use Liukangkun\Kuaishou\Kernel\Contracts\Arrayable;
+use Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException;
+use Liukangkun\Kuaishou\Kernel\Http\Response;
+use Liukangkun\Kuaishou\Kernel\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 
 trait ResponseCastable
@@ -35,7 +35,7 @@ trait ResponseCastable
      * @param ResponseInterface $response
      * @param string            $type
      *
-     * @return array|Response|\Liukun\Kuaishou\Kernel\Support\Collection|object|ResponseInterface
+     * @return array|Response|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|ResponseInterface
      * @throws InvalidArgumentException
      *
      */
@@ -69,7 +69,7 @@ trait ResponseCastable
      * @param mixed  $response
      * @param string $type
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      *@throws InvalidArgumentException
      *
      */

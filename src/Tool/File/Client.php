@@ -1,8 +1,8 @@
 <?php
 
-namespace Liukun\Kuaishou\Tool\File;
+namespace Liukangkun\Kuaishou\Tool\File;
 
-use Liukun\Kuaishou\Kernel\BaseClient;
+use Liukangkun\Kuaishou\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
@@ -10,11 +10,11 @@ class Client extends BaseClient
      * 上传视频.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function uploadVideo(array $params)
     {
@@ -25,11 +25,11 @@ class Client extends BaseClient
      * 获取视频列表.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getVideos(array $params)
     {
@@ -40,11 +40,11 @@ class Client extends BaseClient
      * 上传图片.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function uploadImage(array $params)
     {
@@ -55,11 +55,11 @@ class Client extends BaseClient
      * 获取图片信息.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getImage(array $params)
     {
@@ -70,11 +70,11 @@ class Client extends BaseClient
      * 获取图片列表.
      * @param array $params
      *
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getImages(array $params)
     {

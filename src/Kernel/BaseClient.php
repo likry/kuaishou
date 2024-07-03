@@ -1,10 +1,10 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel;
+namespace Liukangkun\Kuaishou\Kernel;
 
-use Liukun\Kuaishou\Kernel\Exceptions\ApiException;
-use Liukun\Kuaishou\Kernel\Traits\HasHttpRequests;
-use Liukun\Kuaishou\Kernel\Traits\HasSdkBaseInfo;
+use Liukangkun\Kuaishou\Kernel\Exceptions\ApiException;
+use Liukangkun\Kuaishou\Kernel\Traits\HasHttpRequests;
+use Liukangkun\Kuaishou\Kernel\Traits\HasSdkBaseInfo;
 use GuzzleHttp\Psr7\Request;
 
 /**
@@ -44,7 +44,7 @@ class BaseClient
      * @param array  $data
      * @param array  $query
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Liukun\Kuaishou\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
      *@throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
@@ -61,7 +61,7 @@ class BaseClient
      * @param string $url
      * @param array  $data
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Liukun\Kuaishou\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
      *@throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
@@ -79,7 +79,7 @@ class BaseClient
      * @param array  $data
      * @param array  $query
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Liukun\Kuaishou\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
      *@throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
@@ -96,7 +96,7 @@ class BaseClient
      * @param array  $options
      * @param bool   $returnRaw
      *
-     * @return \Psr\Http\Message\ResponseInterface|\Liukun\Kuaishou\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
      *@throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *

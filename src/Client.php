@@ -1,29 +1,29 @@
 <?php
 
-namespace Liukun\Kuaishou;
+namespace Liukangkun\Kuaishou;
 
-use Liukun\Kuaishou\Kernel\BaseInvoker;
+use Liukangkun\Kuaishou\Kernel\BaseInvoker;
 
 /**
  * Class Client.
  *
- * @property \Liukun\Kuaishou\Advertiser\Client           $advertiser
- * @property \Liukun\Kuaishou\Advertising\Campaign\Client $campaign
- * @property \Liukun\Kuaishou\Advertising\Unit\Client     $unit
- * @property \Liukun\Kuaishou\Advertising\Creative\Client $creative
- * @property \Liukun\Kuaishou\Report\Client               $report
- * @property \Liukun\Kuaishou\Tool\Invoker                $tool
- * @property \Liukun\Kuaishou\Dmp\Invoker                 $dmp
+ * @property \Liukangkun\Kuaishou\Advertiser\Client           $advertiser
+ * @property \Liukangkun\Kuaishou\Advertising\Campaign\Client $campaign
+ * @property \Liukangkun\Kuaishou\Advertising\Unit\Client     $unit
+ * @property \Liukangkun\Kuaishou\Advertising\Creative\Client $creative
+ * @property \Liukangkun\Kuaishou\Report\Client               $report
+ * @property \Liukangkun\Kuaishou\Tool\Invoker                $tool
+ * @property \Liukangkun\Kuaishou\Dmp\Invoker                 $dmp
  */
 class Client extends BaseInvoker
 {
     protected $providers = [
-        'advertiser' => \Liukun\Kuaishou\Advertiser\Client::class,
-        'campaign'   => \Liukun\Kuaishou\Advertising\Campaign\Client::class,
-        'unit'       => \Liukun\Kuaishou\Advertising\Unit\Client::class,
-        'creative'   => \Liukun\Kuaishou\Advertising\Creative\Client::class,
-        'report'     => \Liukun\Kuaishou\Report\Client::class,
-        'tool'       => \Liukun\Kuaishou\Tool\Invoker::class,
-        'dmp'        => \Liukun\Kuaishou\Dmp\Invoker::class,
+        'advertiser' => \Liukangkun\Kuaishou\Advertiser\Client::class,
+        'campaign'   => \Liukangkun\Kuaishou\Advertising\Campaign\Client::class,
+        'unit'       => \Liukangkun\Kuaishou\Advertising\Unit\Client::class,
+        'creative'   => \Liukangkun\Kuaishou\Advertising\Creative\Client::class,
+        'report'     => \Liukangkun\Kuaishou\Report\Client::class,
+        'tool'       => \Liukangkun\Kuaishou\Tool\Invoker::class,
+        'dmp'        => \Liukangkun\Kuaishou\Dmp\Invoker::class,
     ];
 }

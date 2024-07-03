@@ -1,18 +1,18 @@
 <?php
 
-namespace Liukun\Kuaishou\Tool\CreativeWord;
+namespace Liukangkun\Kuaishou\Tool\CreativeWord;
 
-use Liukun\Kuaishou\Kernel\BaseClient;
+use Liukangkun\Kuaishou\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
     /**
      * 获取动态词包列表.
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function get()
     {
@@ -21,11 +21,11 @@ class Client extends BaseClient
 
     /**
      * 获取贴纸样式列表.
-     * @return array|\Liukun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
+     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @throws \Liukun\Kuaishou\Kernel\Exceptions\ApiException
+     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getStyles()
     {

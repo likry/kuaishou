@@ -1,10 +1,10 @@
 <?php
 
-namespace Liukun\Kuaishou\Kernel\Support;
+namespace Liukangkun\Kuaishou\Kernel\Support;
 
 use ArrayAccess;
 use ArrayIterator;
-use Liukun\Kuaishou\Kernel\Contracts\Arrayable;
+use Liukangkun\Kuaishou\Kernel\Contracts\Arrayable;
 use Countable;
 use IteratorAggregate;
 use JsonSerializable;
