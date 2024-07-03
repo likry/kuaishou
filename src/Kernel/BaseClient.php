@@ -41,17 +41,18 @@ class BaseClient
      * GET request.
      *
      * @param string $url
-     * @param array  $data
-     * @param array  $query
+     * @param array $data
+     * @param array $query
      *
      * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
-     *@throws Exceptions\InvalidArgumentException
+     * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
      * @throws ApiException
      */
     public function httpGetJson($url, array $data = [], array $query = [])
     {
+        $data['advertiser_id'] = $this->getAdvertiserId();
         return $this->request($url, 'GET', ['query' => $query, 'json' => $data]);
     }
 
@@ -59,16 +60,17 @@ class BaseClient
      * JSON request.
      *
      * @param string $url
-     * @param array  $data
+     * @param array $data
      *
      * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
-     *@throws Exceptions\InvalidArgumentException
+     * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
      * @throws ApiException
      */
     public function httpPost($url, array $data = [])
     {
+        $data['advertiser_id'] = $this->getAdvertiserId();
         return $this->request($url, 'POST', ['form_params' => $data]);
     }
 
@@ -76,28 +78,29 @@ class BaseClient
      * JSON request.
      *
      * @param string $url
-     * @param array  $data
-     * @param array  $query
+     * @param array $data
+     * @param array $query
      *
      * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
-     *@throws Exceptions\InvalidArgumentException
+     * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
      * @throws ApiException
      */
     public function httpPostJson($url, array $data = [], array $query = [])
     {
+        $data['advertiser_id'] = $this->getAdvertiserId();
         return $this->request($url, 'POST', ['query' => $query, 'json' => $data]);
     }
 
     /**
      * @param string $url
      * @param string $method
-     * @param array  $options
-     * @param bool   $returnRaw
+     * @param array $options
+     * @param bool $returnRaw
      *
      * @return \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string
-     *@throws Exceptions\InvalidArgumentException
+     * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
      * @throws ApiException
@@ -107,8 +110,6 @@ class BaseClient
         if (empty($this->middlewares)) {
             $this->registerHttpMiddlewares();
         }
-
-        $options['json']['advertiser_id'] = $this->getAdvertiserId();
         $response = $this->performRequest($url, $method, $options);
 
         $result = $this->castResponseToType($response);
