@@ -8,13 +8,6 @@ class Client extends BaseClient
 {
     /**
      * 上传视频.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function uploadVideo(array $params)
     {
@@ -23,13 +16,6 @@ class Client extends BaseClient
 
     /**
      * 获取视频列表.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getVideos(array $params)
     {
@@ -38,13 +24,6 @@ class Client extends BaseClient
 
     /**
      * 上传图片.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function uploadImage(array $params)
     {
@@ -53,13 +32,6 @@ class Client extends BaseClient
 
     /**
      * 获取图片信息.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getImage(array $params)
     {
@@ -68,13 +40,6 @@ class Client extends BaseClient
 
     /**
      * 获取图片列表.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getImages(array $params)
     {

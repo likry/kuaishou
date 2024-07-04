@@ -8,13 +8,6 @@ class Client extends BaseClient
 {
     /**
      * 上传人群包.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function upload(array $params)
     {
@@ -23,13 +16,6 @@ class Client extends BaseClient
 
     /**
      * 获取人群包列表.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function get(array $params)
     {
@@ -38,13 +24,6 @@ class Client extends BaseClient
 
     /**
      * 删除人群包.
-     * @param $id
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function delete($id)
     {
@@ -57,13 +36,6 @@ class Client extends BaseClient
 
     /**
      * 推送人群包.
-     * @param $id
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function push($id)
     {

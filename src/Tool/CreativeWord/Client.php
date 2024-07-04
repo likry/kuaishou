@@ -8,11 +8,6 @@ class Client extends BaseClient
 {
     /**
      * 获取动态词包列表.
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function get()
     {
@@ -21,11 +16,6 @@ class Client extends BaseClient
 
     /**
      * 获取贴纸样式列表.
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getStyles()
     {

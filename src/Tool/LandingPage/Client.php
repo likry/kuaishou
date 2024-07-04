@@ -8,13 +8,6 @@ class Client extends BaseClient
 {
     /**
      * 获取落地页列表.
-     * @param array $params
-     *
-     * @return array|\Liukangkun\Kuaishou\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *@throws \Liukangkun\Kuaishou\Kernel\Exceptions\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws \Liukangkun\Kuaishou\Kernel\Exceptions\ApiException
      */
     public function getPages(array $params)
     {

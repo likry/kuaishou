@@ -7,22 +7,20 @@ use Psr\Http\Message\ResponseInterface;
 class ApiException extends Exception
 {
     /**
-     * @var \Psr\Http\Message\ResponseInterface|null
+     * @var ResponseInterface|null
      */
     public $response;
 
     /**
-     * @var \Psr\Http\Message\ResponseInterface|\Liukangkun\Kuaishou\Kernel\Support\Collection|array|object|string|null
+     * @var mixed|null
      */
     public $formattedResponse;
 
     /**
-     * HttpException constructor.
-     *
-     * @param string                                   $message
-     * @param \Psr\Http\Message\ResponseInterface|null $response
-     * @param mixed                                    $formattedResponse
-     * @param int|null                                 $code
+     * @param $message
+     * @param ResponseInterface|null $response
+     * @param $formattedResponse
+     * @param $code
      */
     public function __construct($message, ResponseInterface $response = null, $formattedResponse = null, $code = null)
     {
