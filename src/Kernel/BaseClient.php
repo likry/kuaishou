@@ -32,7 +32,7 @@ class BaseClient extends BaseRequest
     public function httpGetJson(string $url, array $data = [])
     {
         $data['advertiser_id'] = $this->getAdvertiserId();
-        return $this->httpRequest($url, 'GET', ['query' => $data, 'headers' => [
+        return $this->httpRequest($url, 'GET', ['json' => $data, 'headers' => [
             'Access-Token' => $this->getAccessToken()
         ]]);
     }

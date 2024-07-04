@@ -68,9 +68,9 @@ class AuthClient extends BaseRequest
      * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function httpGetJson(string $url, array $data = [], array $query = [])
+    public function httpGetJson(string $url, array $data = [])
     {
-        return $this->httpRequest($url, 'GET', ['query' => $query, 'json' => $data]);
+        return $this->httpRequest($url, 'GET', ['json' => $data]);
     }
 
     /**
