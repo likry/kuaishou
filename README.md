@@ -26,40 +26,6 @@ var_dump($auth->refreshTokens(REFRESH_TOKEN));
 $client = new Client(ADVERTISE_ID, TOKEN);
 var_dump($client->advertiser->getInfo());
 ```
-
-### 参照示例
-
-组件提供了一个Interface [`Liukangkun\Kuaishou\Kernel\Contracts\KuaishouService`](src/Kernel/Contracts/KuaishouService.php)
-
-这里以一个实现了Integerface的Service为例：
-
-```php
-use Liukangkun\Kuaishou\Client;
-use App\Services\KuaishouService;
-
-$apps = KuaishouService::getApps();
-
-// 遍历开发者应用
-foreach ($apps as $app) {
-
-    $service = new KuaishouService($app['id'], $app['secret']);
-    $advertiserIds = $service->getAdvertiserIds();
-
-    // 遍历应用下授权的广告主
-    foreach ($advertiserIds as $advertiserId) {
-        $tokens = $service->getTokenByCache($advertiserId);
-        $client = new Client($tokens['advertiser_id'], $tokens['access_token']);
-
-        // 处理业务逻辑
-        try {
-            $result = $client->advertiser->getFunds();
-        } catch(\Exception $e) {
-            //
-        }
-    }
-}
-```
-
 ## 所有方法
 
 广告主模块|执行方式

@@ -3,3 +3,6 @@
 /vendor/
 /composer.lock
 /*.php
+/1.jpg
+/.htaccess
+/nginx.htaccess
