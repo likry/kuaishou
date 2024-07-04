@@ -1,6 +1,6 @@
 ## 安装
 ```bash
-composer composer require liukangkun/kuaishou:*
+composer composer require liukangkun/kuaishou:^1.0
 ```
 
 ## 使用说明
