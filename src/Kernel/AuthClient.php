@@ -64,30 +64,8 @@ class AuthClient extends BaseRequest
     /**
      * @param string $url
      * @param array $data
-     * @param array $query
      * @return array|bool|float|int|object|string|null
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function httpGetJson(string $url, array $data = [])
-    {
-        return $this->httpRequest($url, 'GET', ['json' => $data]);
-    }
-
-    /**
-     * @param string $url
-     * @param array $data
-     * @return array|bool|float|int|object|string|null
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function httpPost(string $url, array $data = [])
-    {
-        return $this->httpRequest($url, 'POST', ['form_params' => $data]);
-    }
-
-    /**
-     * @param string $url
-     * @param array $data
-     * @return array|bool|float|int|object|string|null
+     * @throws Exception\KuaishouException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function httpPostJson(string $url, array $data = [])

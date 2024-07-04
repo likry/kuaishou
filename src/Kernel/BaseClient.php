@@ -37,13 +37,30 @@ class BaseClient extends BaseRequest
         ]]);
     }
 
+    public function httpPost(string $url, array $data = [])
+    {
+        $multipart [] = [
+            'name' => 'advertiser_id',
+            'contents' => $this->getAdvertiserId()
+        ];
+        foreach ($data as $key => $value) {
+            $multipart[] = [
+                'name' => $key,
+                'contents' => $value
+            ];
+        }
+        return $this->httpRequest($url, 'POST', ['multipart' => $multipart, 'headers' => [
+            'Access-Token' => $this->getAccessToken()
+        ]]);
+    }
+
     /**
      * @param string $url
      * @param array $data
      * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function httpPost(string $url, array $data = [])
+    public function httpPostBak(string $url, array $data = [])
     {
         $multipart [] = [
             'name' => 'advertiser_id',

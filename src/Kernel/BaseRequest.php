@@ -5,6 +5,8 @@ namespace Liukangkun\Kuaishou\Kernel;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Utils;
+use Liukangkun\Kuaishou\Kernel\Exception\InvalidParamException;
+use Liukangkun\Kuaishou\Kernel\Exception\KuaishouException;
 
 /**
  * Class Client.
@@ -36,14 +38,24 @@ class BaseRequest
      * @param array $options
      * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws KuaishouException
      */
     public function httpRequest($url, $method = 'GET', array $options = [])
     {
+        $validMethods = ['GET', 'POST', 'PUT', 'DELETE'];
         $method = strtoupper($method);
+        if (!in_array($method, $validMethods, true)) {
+            throw new InvalidParamException("Invalid HTTP method: {$method}");
+        }
         $options = array_merge($this->defaults, $options);
-        $response = $this->getHttpClient()->request($method, $url, $options);
-        $response->getBody()->rewind();
-        $body = $response->getBody();
+        try {
+            $response = $this->getHttpClient()->request($method, $url, $options);
+
+            // 4. 优化响应处理
+            $body = (string)$response->getBody();
+        } catch (\Exception $e) {
+            throw new KuaishouException("Failed to perform HTTP request to {$url}", 501);
+        }
         return Utils::jsonDecode($body, true);
     }
 
