@@ -33,14 +33,14 @@ class BaseRequest
     }
 
     /**
-     * @param $url
-     * @param $method
+     * @param string $url
+     * @param string $method
      * @param array $options
      * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws KuaishouException
      */
-    public function httpRequest($url, $method = 'GET', array $options = [])
+    public function httpRequest(string $url, string $method = 'GET', array $options = [])
     {
         $validMethods = ['GET', 'POST', 'PUT', 'DELETE'];
         $method = strtoupper($method);
