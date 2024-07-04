@@ -3,7 +3,7 @@
 namespace Liukangkun\Kuaishou\Kernel;
 
 use Liukangkun\Kuaishou\Kernel\Traits\HasSdkBaseInfo;
-use Liukangkun\Kuaishou\Kernel\Exceptions\Exception;
+use \Exception;
 
 class BaseInvoker
 {

@@ -3,19 +3,15 @@
 namespace Liukangkun\Kuaishou;
 
 use Liukangkun\Kuaishou\Kernel\AuthClient;
-use Liukangkun\Kuaishou\Kernel\Exceptions\AuthException;
 
 
 class Auth extends AuthClient
 {
     /**
+     * 获取token
      * @param $authCode
-     *
-     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
+     * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws Kernel\Exceptions\InvalidArgumentException
-     *
-     * @throws AuthException
      */
     public function getTokens($authCode)
     {
@@ -29,13 +25,10 @@ class Auth extends AuthClient
     }
 
     /**
+     * 刷新token
      * @param $refreshToken
-     *
-     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
-     * @throws Kernel\Exceptions\InvalidArgumentException
+     * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @throws AuthException
      */
     public function refreshTokens($refreshToken)
     {

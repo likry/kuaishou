@@ -5,7 +5,6 @@ namespace Liukangkun\Kuaishou\Kernel;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Utils;
-use Liukangkun\Kuaishou\Kernel\Exceptions\ApiException;
 
 /**
  * Class Client.
@@ -46,14 +45,7 @@ class BaseRequest
         $response->getBody()->rewind();
         // 获取响应体的内容作为字符串
         $body = $response->getBody();
-        $result = Utils::jsonDecode($body, true);
-        // 将JSON字符串转换为PHP数组
-        if (!isset($result['code']) || $result['code'] != 0) {
-            $message = isset($result['message']) ? $result['message'] : '';
-            $code = isset($result['code']) ? $result['code'] : 0;
-            throw new ApiException($message, $response, $result, $code);
-        }
-        return $result;
+        return Utils::jsonDecode($body, true);
     }
 
     protected function getGuzzleHandler()
