@@ -43,7 +43,6 @@ class BaseRequest
         $options = array_merge($this->defaults, $options);
         $response = $this->getHttpClient()->request($method, $url, $options);
         $response->getBody()->rewind();
-        // 获取响应体的内容作为字符串
         $body = $response->getBody();
         return Utils::jsonDecode($body, true);
     }
