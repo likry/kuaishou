@@ -45,8 +45,17 @@ class BaseClient extends BaseRequest
      */
     public function httpPost(string $url, array $data = [])
     {
-        $data['advertiser_id'] = $this->getAdvertiserId();
-        return $this->httpRequest($url, 'POST', ['form_params' => $data, 'headers' => [
+        $multipart [] = [
+            'name' => 'advertiser_id',
+            'contents' => $this->getAdvertiserId()
+        ];
+        foreach ($data as $key => $value) {
+            $multipart[] = [
+                'name' => $key,
+                'contents' => $value
+            ];
+        }
+        return $this->httpRequest($url, 'POST', ['multipart' => $multipart, 'headers' => [
             'Access-Token' => $this->getAccessToken()
         ]]);
     }
