@@ -16,6 +16,9 @@ var_dump($auth->getTokens(AUTH_CODE));
 
 // 刷新token
 var_dump($auth->refreshTokens(REFRESH_TOKEN));
+
+//拉取token下授权广告账户
+var_dump($auth->getAdvertisers(ACCESS_TOKEN));
 ```
 
 ### 基础调用
