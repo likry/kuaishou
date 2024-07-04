@@ -1,6 +1,6 @@
 ## 安装
 ```bash
-composer require cloudycity/kuaishou-marketing-sdk:*
+composer composer require liukangkun/kuaishou:*
 ```
 
 ## 使用说明
