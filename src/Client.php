@@ -13,7 +13,6 @@ use Liukangkun\Kuaishou\Kernel\BaseInvoker;
  * @property \Liukangkun\Kuaishou\Advertising\Creative\Client $creative
  * @property \Liukangkun\Kuaishou\Report\Client               $report
  * @property \Liukangkun\Kuaishou\Tool\Invoker                $tool
- * @property \Liukangkun\Kuaishou\Dmp\Invoker                 $dmp
  */
 class Client extends BaseInvoker
 {
@@ -24,6 +23,5 @@ class Client extends BaseInvoker
         'creative'   => \Liukangkun\Kuaishou\Advertising\Creative\Client::class,
         'report'     => \Liukangkun\Kuaishou\Report\Client::class,
         'tool'       => \Liukangkun\Kuaishou\Tool\Invoker::class,
-        'dmp'        => \Liukangkun\Kuaishou\Dmp\Invoker::class,
     ];
 }

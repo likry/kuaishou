@@ -17,11 +17,6 @@ use Liukangkun\Kuaishou\Kernel\BaseInvoker;
 class Invoker extends BaseInvoker
 {
     protected $providers = [
-        'app'          => \Liukangkun\Kuaishou\Tool\App\Client::class,
-        'creativeWord' => \Liukangkun\Kuaishou\Tool\CreativeWord\Client::class,
         'file'         => \Liukangkun\Kuaishou\Tool\File\Client::class,
-        'interestTag'  => \Liukangkun\Kuaishou\Tool\InterestTag\Client::class,
-        'landingPage'  => \Liukangkun\Kuaishou\Tool\LandingPage\Client::class,
-        'region'       => \Liukangkun\Kuaishou\Tool\Region\Client::class,
     ];
 }
