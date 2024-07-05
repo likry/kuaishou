@@ -31,21 +31,21 @@ var_dump($client->advertiser->getInfo());
 ```
 ## 所有方法
 
-广告主模块|执行方式
+广告主模块|调用方法
 ---|---
 获取广告主信息|$client->advertiser->getInfo()
 获取广告账户余额信息|$client->advertiser->getFunds()
 获取广告账户流水信息|$client->advertiser->getFlows($params)
 账户日预算查询|$client->advertiser->getBudget()
 
-广告计划模块|执行方式
+广告计划模块|调用方法
 ---|---
 获取广告计划|$client->campaign->get($params)
 创建广告计划|$client->campaign->create($params)
 修改广告计划|$client->campaign->update($params)
 更新计划状态|$client->campaign->updateStatus($campaignId, $status)
 
-广告组|执行方式
+广告组|调用方法
 ---|---
 查询广告组|$client->unit->get($params)
 创建广告组|$client->unit->create($params)
@@ -54,21 +54,21 @@ var_dump($client->advertiser->getInfo());
 修改广告组预算|$client->unit->updateBudget($unitId, $budget)
 修改广告组状态|$client->unit->updateStatus($unitId, $status)
 
-广告创意|执行方式
+广告创意|调用方法
 ---|---
 查询程序化创意|$client->creative->get($params)
 创建程序化创意|$client->creative->create($params)
 修改程序化创意|$client->creative->update($params)
 修改创意状态|$client->creative->updateStatus($creativeId, $status)
 
-数据报表|执行方式
+数据报表|调用方法
 ---|---
 广告主数据|$client->report->getAdvertiserReports($params)
 广告计划数据|$client->report->getCampaignReports($params)
 广告组数据|$client->report->getUnitReports($params)
 广告创意数据|$client->report->getCreativeReports($params)
 
-工具（文件管理）|执行方式
+工具（文件管理）|调用方法
 ---|---
 上传视频|$client->tool->file->uploadVideo($params)
 获取视频列表|$client->tool->file->getVideos($params)
