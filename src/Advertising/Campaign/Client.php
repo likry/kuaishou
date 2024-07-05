@@ -8,32 +8,43 @@ class Client extends BaseClient
 {
     /**
      * 创建广告计划.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function create(array $params)
     {
-        return $this->httpPostJson('v2/campaign/create', $params);
+        return $this->httpPostJson('gw/dsp/campaign/create', $params);
     }
 
     /**
-     * 获取广告计划列表.
+     * 获取广告计划信息.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function get(array $params)
     {
-        return $this->httpPostJson('v1/campaign/list', $params);
+        return $this->httpPostJson('gw/dsp/campaign/list', $params);
     }
 
     /**
-     * 更新广告计划.
+     * 修改广告计划.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function update(array $params)
     {
-        return $this->httpPostJson('v2/campaign/update', $params);
+        return $this->httpPostJson('gw/dsp/campaign/update', $params);
     }
 
     /**
-     * 更新广告计划状态
+     * 修改广告计划状态
      * @param $campaignId
      * @param $status
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function updateStatus($campaignId, $status)
     {

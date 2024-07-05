@@ -34,8 +34,9 @@ var_dump($client->advertiser->getInfo());
 广告主模块|执行方式
 ---|---
 获取广告主信息|$client->advertiser->getInfo()
-创建广告主余额|$client->advertiser->getFunds()
-修改广告主流水|$client->advertiser->getFlows($params)
+获取广告账户余额信息|$client->advertiser->getFunds()
+获取广告账户流水信息|$client->advertiser->getFlows($params)
+账户日预算查询|$client->advertiser->getBudget()
 
 广告计划模块|执行方式
 ---|---
@@ -46,20 +47,19 @@ var_dump($client->advertiser->getInfo());
 
 广告组|执行方式
 ---|---
-获取广告组|$client->unit->get($params)
+查询广告组|$client->unit->get($params)
 创建广告组|$client->unit->create($params)
 修改广告组|$client->unit->update($params)
-更新组出价|$client->unit->updateBid($unitId, $bid)
-更新组预算|$client->unit->updateBudget($unitId, $budget)
-更新组状态|$client->unit->updateStatus($unitId, $status)
-获取深度转化类型|$client->unit->getConversionInfo()
+修改广告组出价|$client->unit->updateBid($unitId, $bid)
+修改广告组预算|$client->unit->updateBudget($unitId, $budget)
+修改广告组状态|$client->unit->updateStatus($unitId, $status)
 
 广告创意|执行方式
 ---|---
-获取创意列表|$client->creative->get($params)
-创建广告创意|$client->creative->create($params)
-修改创意信息|$client->creative->update($params)
-更新创意状态|$client->creative->updateStatus($creativeId, $status)
+查询程序化创意|$client->creative->get($params)
+创建程序化创意|$client->creative->create($params)
+修改程序化创意|$client->creative->update($params)
+修改创意状态|$client->creative->updateStatus($creativeId, $status)
 
 数据报表|执行方式
 ---|---
@@ -67,13 +67,6 @@ var_dump($client->advertiser->getInfo());
 广告计划数据|$client->report->getCampaignReports($params)
 广告组数据|$client->report->getUnitReports($params)
 广告创意数据|$client->report->getCreativeReports($params)
-
-DMP 人群管理|执行方式
----|---
-上传人群|$client->dmp->population->upload($params)
-人群列表查询|$client->dmp->population->get($params)
-删除人群包|$client->dmp->population->delete($id)
-推送人群包|$client->dmp->population->push($id)
 
 工具（文件管理）|执行方式
 ---|---
@@ -83,30 +76,4 @@ DMP 人群管理|执行方式
 获取图片信息|client->tool->file->getImage($params)
 获取图片列表|client->tool->file->getImages($params)
 
-工具（动态词包）|执行方式
----|---
-获取动态词包|$client->tool->creativeWord->get()
-获取贴纸样式|$client->tool->creativeWord->getStyles()
-
-工具（定向标签）|执行方式
----|---
-获取定向标签|$client->tool->interestTag->get($type)
-
-工具（应用定向）|执行方式
----|---
-获取应用列表|$client->tool->app->get($params)
-创建应用|$client->tool->app->create($params)
-更新应用|$client->tool->app->update($params)
-获取应用定向列表|$client->tool->app->search($appName)
-
-工具（应用定向）|执行方式
----|---
-获取地域信息|$client->tool->region->get()
-
-工具（建站工具）|执行方式
----|---
-获取落地页列表|$client->tool->landingPage->getPages($params)
-获取组件列表|$client->tool->landingPage->getComponents($params)
-获取线索列表|$client->tool->landingPage->getLeads($params)
-更新线索|$client->tool->landingPage->updateLeads($params)
 

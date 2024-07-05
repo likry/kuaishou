@@ -7,7 +7,10 @@ use Liukangkun\Kuaishou\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取广告主报表.
+     * 广告主数据（实时）
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getAdvertiserReports(array $params)
     {
@@ -15,7 +18,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告计划报表.
+     * 广告计划数据（实时）
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getCampaignReports(array $params)
     {
@@ -23,7 +29,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告组报表.
+     * 广告组数据
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getUnitReports(array $params)
     {
@@ -31,7 +40,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告创意报表.
+     * 广告创意数据-自定义
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getCreativeReports(array $params)
     {

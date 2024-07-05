@@ -8,6 +8,8 @@ class Client extends BaseClient
 {
     /**
      * 上传视频.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
      */
     public function uploadVideo(array $params)
     {
@@ -16,6 +18,9 @@ class Client extends BaseClient
 
     /**
      * 获取视频列表.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getVideos(array $params)
     {
@@ -24,6 +29,8 @@ class Client extends BaseClient
 
     /**
      * 上传图片.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
      */
     public function uploadImage(array $params)
     {
@@ -32,6 +39,9 @@ class Client extends BaseClient
 
     /**
      * 获取图片信息.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getImage(array $params)
     {
@@ -40,6 +50,9 @@ class Client extends BaseClient
 
     /**
      * 获取图片列表.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getImages(array $params)
     {

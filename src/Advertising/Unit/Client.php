@@ -8,30 +8,43 @@ class Client extends BaseClient
 {
     /**
      * 创建广告组.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function create(array $params)
     {
-        return $this->httpPostJson('v2/ad_unit/create', $params);
+        return $this->httpPostJson('gw/dsp/unit/create', $params);
     }
 
     /**
-     * 获取广告组列表.
+     * 查询广告组.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function get(array $params)
     {
-        return $this->httpPostJson('v1/ad_unit/list', $params);
+        return $this->httpPostJson('gw/dsp/unit/list', $params);
     }
 
     /**
-     * 更新广告组.
+     * 修改广告组.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function update(array $params)
     {
-        return $this->httpPostJson('v2/ad_unit/update', $params);
+        return $this->httpPostJson('gw/dsp/unit/update', $params);
     }
 
     /**
-     * 更新广告组出价.
+     * 修改广告组出价.
+     * @param $unitId
+     * @param $bid
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function updateBid($unitId, $bid)
     {
@@ -44,7 +57,11 @@ class Client extends BaseClient
     }
 
     /**
-     * 更新广告组预算.
+     * 修改广告组预算.
+     * @param $unitId
+     * @param $budget
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function updateBudget($unitId, $budget)
     {
@@ -57,7 +74,11 @@ class Client extends BaseClient
     }
 
     /**
-     * 更新广告组状态
+     * 修改广告组状态
+     * @param $unitId
+     * @param $status
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function updateStatus($unitId, $status)
     {
@@ -67,13 +88,5 @@ class Client extends BaseClient
         ];
 
         return $this->httpPostJson('v1/ad_unit/update/status', $params);
-    }
-
-    /**
-     * 获取深度转化类型.
-     */
-    public function getConversionInfo()
-    {
-        return $this->httpGetJson('v1/ad_unit/ocpc/conversion_infos');
     }
 }

@@ -7,31 +7,44 @@ use Liukangkun\Kuaishou\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 创建广告创意.
+     * 创建程序化创意.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function create(array $params)
     {
-        return $this->httpPostJson('v2/creative/create', $params);
+        return $this->httpPostJson('gw/dsp/advanced_creative/create', $params);
     }
 
     /**
-     * 获取广告创意列表.
+     * 查询程序化创意.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function get(array $params)
     {
-        return $this->httpPostJson('v1/creative/list', $params);
+        return $this->httpPostJson('gw/dsp/advanced_creative/list', $params);
     }
 
     /**
-     * 更新广告创意.
+     * 修改程序化创意.
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function update(array $params)
     {
-        return $this->httpPostJson('v2/creative/update', $params);
+        return $this->httpPostJson('gw/dsp/advanced_creative/update', $params);
     }
 
     /**
-     * 更新广告创意状态
+     * 修改创意状态
+     * @param $creativeId
+     * @param $status
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function updateStatus($creativeId, $status)
     {
