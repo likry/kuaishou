@@ -2,6 +2,7 @@
 
 namespace Liukangkun\Kuaishou\Kernel;
 
+use Liukangkun\Kuaishou\Kernel\Http\BaseRequest;
 use Liukangkun\Kuaishou\Kernel\Traits\HasSdkBaseInfo;
 
 /**
@@ -37,6 +38,14 @@ class BaseClient extends BaseRequest
         ]]);
     }
 
+    /**
+     * @param string $url
+     * @param array $data [['name' => 'foo','contents' => 'data','headers'  => ['X-Baz' => 'bar']]
+     * @return array|bool|float|int|object|string|null
+     * @throws Exception\InvalidParamException
+     * @throws Exception\KuaishouException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function httpPost(string $url, array $data = [])
     {
         $multipart [] = [
@@ -44,33 +53,27 @@ class BaseClient extends BaseRequest
             'contents' => $this->getAdvertiserId()
         ];
         foreach ($data as $key => $value) {
-            $multipart[] = [
-                'name' => $key,
-                'contents' => $value
-            ];
-        }
-        return $this->httpRequest($url, 'POST', ['multipart' => $multipart, 'headers' => [
-            'Access-Token' => $this->getAccessToken()
-        ]]);
-    }
-
-    /**
-     * @param string $url
-     * @param array $data
-     * @return array|bool|float|int|object|string|null
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function httpPostBak(string $url, array $data = [])
-    {
-        $multipart [] = [
-            'name' => 'advertiser_id',
-            'contents' => $this->getAdvertiserId()
-        ];
-        foreach ($data as $key => $value) {
-            $multipart[] = [
-                'name' => $key,
-                'contents' => $value
-            ];
+            if (is_array($value)) {
+                // 如果字段是数组，将其转换为多个键值对
+                foreach ($value as $item) {
+                    $multipart[] = [
+                        'name' => $key,
+                        'contents' => is_string($item) ? $item : json_encode($item),
+                    ];
+                }
+            } elseif (is_string($value) && file_exists($value)) {
+                // 如果字段是文件路径，准备文件上传
+                $multipart[] = [
+                    'name' => $key,
+                    'contents' => fopen($value, 'r'),
+                ];
+            } else {
+                // 如果字段不是数组或文件，直接添加
+                $multipart[] = [
+                    'name' => $key,
+                    'contents' => $value,
+                ];
+            }
         }
         return $this->httpRequest($url, 'POST', ['multipart' => $multipart, 'headers' => [
             'Access-Token' => $this->getAccessToken()

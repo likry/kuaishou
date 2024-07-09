@@ -1,6 +1,6 @@
 <?php
 
-namespace Liukangkun\Kuaishou\Kernel;
+namespace Liukangkun\Kuaishou\Kernel\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Utils;
@@ -12,19 +12,7 @@ use Liukangkun\Kuaishou\Kernel\Exception\KuaishouException;
  */
 class BaseRequest
 {
-    protected $httpClient;
     protected $baseUri = 'https://ad.e.kuaishou.com/rest/openapi/';
-
-
-    public function getHttpClient()
-    {
-        if (!$this->httpClient) {
-            $this->httpClient = new Client([
-                'base_uri' => $this->baseUri
-            ]);
-        }
-        return $this->httpClient;
-    }
 
     /**
      * @param string $url
@@ -43,7 +31,13 @@ class BaseRequest
             throw new InvalidParamException("Invalid HTTP method: {$method}");
         }
         try {
-            $response = $this->getHttpClient()->request($method, $url, $options);
+            $config = [];
+            if ("http" != substr($url, 0, 4)) {
+                $config = [
+                    'base_uri' => $this->baseUri
+                ];
+            }
+            $response = (new Client($config))->request($method, $url, $options);
             $body = (string)$response->getBody();
         } catch (\Exception $e) {
             throw new KuaishouException("Failed to perform HTTP request to {$url}", 501);

@@ -2,6 +2,8 @@
 
 namespace Liukangkun\Kuaishou\Kernel;
 
+use Liukangkun\Kuaishou\Kernel\Http\BaseRequest;
+
 /**
  * Class Client.
  */
