@@ -4,6 +4,7 @@ composer require liukangkun/kuaishou:^1.0
 ```
 
 ## 使用说明
+[快手开放平台文档](https://developers.e.kuaishou.com/docs)
 
 ### 授权
 
