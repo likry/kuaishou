@@ -90,7 +90,7 @@ class Client extends BaseClient
     /**
      * 文件流方式上传
      * @param string $file 本地文件路径
-     * @param string $file_type
+     * @param string $file_type 文件类型，视频文件传 "mp4"
      * @return array|bool|float|int|object|string|null
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Liukangkun\Kuaishou\Kernel\Exception\InvalidParamException
@@ -131,9 +131,9 @@ class Client extends BaseClient
     public function chunkUploadVideo(string $file, string $file_type = 'mp4')
     {
         //检测文件后缀是否为mp4
-        if (pathinfo($file, PATHINFO_EXTENSION) != 'mp4') {
-            return ['code' => 1001, 'message' => '只允许上传mp4格式的视频'];
-        }
+//        if (pathinfo($file, PATHINFO_EXTENSION) != 'mp4') {
+//            return ['code' => 1001, 'message' => '只允许上传mp4格式的视频'];
+//        }
         $token = $this->getUploadToken($file_type);
         if ($token['code']) {
             return $token;
