@@ -23,8 +23,6 @@ var_dump($auth->getAdvertisers(ACCESS_TOKEN));
 
 ### 基础调用
 
-参照[所有方法](#所有方法)
-
 ```php
 $client = new Client(ADVERTISE_ID, TOKEN);
 var_dump($client->advertiser->getInfo());
@@ -67,6 +65,7 @@ var_dump($client->advertiser->getInfo());
 广告计划数据|$client->report->getCampaignReports($params)
 广告组数据|$client->report->getUnitReports($params)
 广告创意数据|$client->report->getCreativeReports($params)
+素材报表|$client->report->getMaterialReports($params)
 
 工具（文件管理）|调用方法
 ---|---

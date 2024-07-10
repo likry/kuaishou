@@ -49,4 +49,15 @@ class Client extends BaseClient
     {
         return $this->httpPostJson('v1/report/creative_report', $params);
     }
+
+    /**
+     * 素材报表
+     * @param array $params
+     * @return array|bool|float|int|object|string|null
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getMaterialReports(array $params)
+    {
+        return $this->httpPostJson('v1/report/material_report', $params);
+    }
 }
