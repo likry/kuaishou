@@ -66,7 +66,7 @@ var_dump($client->advertiser->getInfo());
 广告计划数据|$client->report->getCampaignReports($params)
 广告组数据|$client->report->getUnitReports($params)
 广告创意数据|$client->report->getCreativeReports($params)
-素材报表|$client->report->getMaterialReports($params)
+广告素材报表|$client->report->getMaterialReports($params)
 
 工具（文件管理）|调用方法
 ---|---
