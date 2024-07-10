@@ -116,8 +116,9 @@ class Client extends BaseClient
         }
         //获取blob_store_key
         $blob_store_key = $verify_res['data']['blob_store_key'];
+        $file_name = pathinfo($file, PATHINFO_FILENAME);
         //上传到快手视频库
-        return $this->uploadVideo(['blob_store_key' => $blob_store_key, 'signature' => md5_file($file)]);
+        return $this->uploadVideo(['blob_store_key' => $blob_store_key, 'photo_name' => $file_name, 'signature' => md5_file($file)]);
     }
 
     /**
@@ -154,8 +155,10 @@ class Client extends BaseClient
         }
         //获取blob_store_key
         $blob_store_key = $verify_res['data']['blob_store_key'];
+        //获取文件名称和文件后缀
+        $file_name = pathinfo($file, PATHINFO_FILENAME);
         //上传到快手视频库
-        return $this->uploadVideo(['blob_store_key' => $blob_store_key, 'signature' => md5_file($file)]);
+        return $this->uploadVideo(['blob_store_key' => $blob_store_key, 'photo_name' => $file_name, 'signature' => md5_file($file)]);
     }
 
     private function chunkUpload($file, $endpoint, $upload_token, $chunk_size = 1024 * 1024 * 5)
