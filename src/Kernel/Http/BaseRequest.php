@@ -12,7 +12,16 @@ use Liukangkun\Kuaishou\Kernel\Exception\KuaishouException;
  */
 class BaseRequest
 {
+    protected $httpClient;
     protected $baseUri = 'https://ad.e.kuaishou.com/rest/openapi/';
+
+    public function getHttpClient()
+    {
+        if (!$this->httpClient) {
+            $this->httpClient = new Client();
+        }
+        return $this->httpClient;
+    }
 
     /**
      * @param string $url
@@ -31,13 +40,10 @@ class BaseRequest
             throw new InvalidParamException("Invalid HTTP method: {$method}");
         }
         try {
-            $config = [];
             if ("http" != substr($url, 0, 4)) {
-                $config = [
-                    'base_uri' => $this->baseUri
-                ];
+                $options['base_uri'] = $this->baseUri;
             }
-            $response = (new Client($config))->request($method, $url, $options);
+            $response = $this->getHttpClient()->request($method, $url, $options);
             $body = (string)$response->getBody();
         } catch (\Exception $e) {
             throw new KuaishouException("Failed to perform HTTP request to {$url}", 501);

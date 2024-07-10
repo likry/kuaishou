@@ -70,10 +70,14 @@ var_dump($client->advertiser->getInfo());
 
 工具（文件管理）|调用方法
 ---|---
-上传视频|$client->tool->file->uploadVideo($params)
-获取视频列表|$client->tool->file->getVideos($params)
 广告图片|$client->tool->file->uploadImage($params)
 获取图片信息|client->tool->file->getImage($params)
 获取图片列表|client->tool->file->getImages($params)
+上传视频|$client->tool->file->uploadVideo($params)
+文件流式上传|client->tool->file->streamUploadVideo($file)
+文件分片上传|client->tool->file->chunkUploadVideo($file)
+获取视频列表|$client->tool->file->getVideos($params)
+
+
 
 
