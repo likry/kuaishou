@@ -2,6 +2,8 @@
 
 namespace Liukangkun\Kuaishou\Kernel;
 
+use GuzzleHttp\Psr7\Utils as PsUtils;
+use GuzzleHttp\Utils;
 use Liukangkun\Kuaishou\Kernel\Http\BaseRequest;
 use Liukangkun\Kuaishou\Kernel\Traits\HasSdkBaseInfo;
 
@@ -58,14 +60,14 @@ class BaseClient extends BaseRequest
                 foreach ($value as $item) {
                     $multipart[] = [
                         'name' => $key,
-                        'contents' => is_string($item) ? $item : json_encode($item),
+                        'contents' => is_string($item) ? $item : Utils::JsonEncode($item),
                     ];
                 }
             } elseif (is_string($value) && file_exists($value)) {
                 // 如果字段是文件路径，准备文件上传
                 $multipart[] = [
                     'name' => $key,
-                    'contents' => fopen($value, 'r'),
+                    'contents' => PsUtils::tryFopen($value, 'r'),
                 ];
             } else {
                 // 如果字段不是数组或文件，直接添加
